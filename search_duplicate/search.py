@@ -6,6 +6,7 @@ import streamlit as st
 
 st.title('Search Duplicate')
 
+#Change file path here
 df = pd.read_csv('https://raw.githubusercontent.com/wpan03/TDF_Technical_Tutorial/master/merge/South_Africa.csv')
 df['year'] = df.year.fillna(0)
 
