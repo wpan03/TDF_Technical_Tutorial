@@ -17,7 +17,7 @@ selectbox = st.sidebar.selectbox(
 )
 
 st.sidebar.title("Info")
-st.sidebar.info("View [source code]()")
+st.sidebar.info("View [source code](https://github.com/wpan03/TDF_Technical_Tutorial/tree/master/tdf_toolbox)")
 
 if selectbox == 'Home Page':
   st.title("Welcome！")
