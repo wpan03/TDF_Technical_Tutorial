@@ -16,7 +16,6 @@ selectbox = st.sidebar.selectbox(
     'Search Duplicate','Merge')
 )
 
-st.sidebar.title("Info")
 st.sidebar.info("View [source code](https://github.com/wpan03/TDF_Technical_Tutorial/tree/master/tdf_toolbox)")
 
 if selectbox == 'Home Page':
