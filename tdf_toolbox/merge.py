@@ -14,7 +14,7 @@ def merge():
         df_export = pd.read_csv(export_file)
 
         df_stage2.columns = df_stage2.columns.str.strip()
-        st.text('stage 2 spreadsheet has following header:{}'.format(str(list(df_stage2.columns[0:5]))))
+        id = [s for s in list(df_stage2.columns) if "id" in s.lower()][0]
 
         country = st.selectbox('Which country?', df_stage2['Country'].unique())
         df_stage2 = df_stage2[df_stage2['Country'] == country]
@@ -22,7 +22,7 @@ def merge():
         
 
     
-        left_identifier = st.text_input('stage 2 identifier', value='Created Project ID')
+        left_identifier = st.text_input('stage 2 identifier', value=id)
         right_identifier = st.text_input('export identifier', value = 'project_id')
         how_to_merge = st.text_input('how to merge', value = 'left')
 
@@ -38,6 +38,6 @@ def merge():
                     csv.encode()).decode()  # some strings <-> bytes conversions necessary here
                     return f'<a href="data:file/csv;base64,{b64}" download="myfilename.csv">Download csv file</a>'
 
-            selections = ['project_id','year','flow_class','Country']        
+            selections = ['project_id','year','flow_class','Country']
             df_merge = df_merge[selections]
             st.markdown(get_table_download_link(df_merge), unsafe_allow_html=True)    
