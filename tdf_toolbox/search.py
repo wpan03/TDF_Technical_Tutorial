@@ -54,18 +54,12 @@ def search_duplicate():
   if st.checkbox('open project in aiddata website'):
       project_id = st.number_input('project_id', value = 0)
       if project_id != 0:
-          webbrowser.open('http://admin.china.aiddata.org/projects/{}'.format(project_id))
+          st.markdown("[Open Project](http://admin.china.aiddata.org/projects/{})".format(project_id))
 
   st.subheader('Useful Sources')
 
-  if st.button('TUFF 1.4 Guide'):
-      webbrowser.open('https://docs.google.com/document/d/1henyi4ixkRKMSH4k2Is9g-N5T8GeBWgEOINDzSaLE4c/edit')
+  st.markdown("[TUFF 1.4 Guide](https://docs.google.com/document/d/1henyi4ixkRKMSH4k2Is9g-N5T8GeBWgEOINDzSaLE4c/edit)")
+  st.markdown("[CRS Sector](https://www.oecd.org/dac/stats/documentupload/Budget%20identifier%20purpose%20codes_EN_Apr%202016.pdf)")
+  st.markdown("[Google Translate](https://translate.google.com/)")
+  st.markdown("[LIBOR](https://www.global-rates.com/interest-rates/libor/american-dollar/2017.aspx)")
 
-  if st.button('CRS Sector'):
-      webbrowser.open('https://www.oecd.org/dac/stats/documentupload/Budget%20identifier%20purpose%20codes_EN_Apr%202016.pdf')
-
-  if st.button('Google Translate'):
-      webbrowser.open('https://translate.google.com/')
-
-  if st.button('LIBOR'):
-      webbrowser.open('https://www.global-rates.com/interest-rates/libor/american-dollar/2017.aspx')
