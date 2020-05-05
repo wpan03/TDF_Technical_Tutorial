@@ -53,7 +53,8 @@ def transfer_amend():
     ocp_amend_requirement  = st.checkbox('ocp amend requirment')
     if ocp_amend_requirement:
         st.markdown("+ The tab in the excel file should have following order: General Tab, Project List, and Year Tab.")
-        st.markdown("+ There should be no line above the header")
+        st.markdown("+ There should be one line above the header in the general tab")
+        st.markdown("+ There should be no line above the header in the project list and year tab")
 
     stage1 = st.file_uploader("Choose a the stage 1 excel file", type="xlsx")
     stage2 = st.file_uploader("Choose a stage 2 excel file", type = "xlsx")

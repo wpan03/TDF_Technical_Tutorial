@@ -8,7 +8,8 @@ def ocp_transfer_created():
   ocp_create_requirement  = st.checkbox('ocp create requirment')
   if ocp_create_requirement:
     st.markdown("+ The tab in the excel file should have following order: General Tab, Project List, and Year Tab.")
-    st.markdown("+ There should be no line above the header")
+    st.markdown("+ There should be one line above the header in the general tab")
+    st.markdown("+ There should be no line above the header in the project list and year tab")
 
   def reshape_dataframe(df):    
       """

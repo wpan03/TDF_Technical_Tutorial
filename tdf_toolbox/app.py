@@ -9,12 +9,13 @@ from transfer_created import ocp_transfer_created
 from transfer_amended import transfer_amend
 from merge import merge
 from examine import examine
+from qa_duplicate import find_repeat
 
 
 selectbox = st.sidebar.selectbox(
     'What do you want to do?',
     ('Home Page','Transfer OCP Created Project', 'Transfer OCP Amended Project', 
-    'Search Duplicate','Merge', 'Examine')
+    'Search Duplicate','Merge', 'Examine', 'Find Repeat')
 )
 
 st.sidebar.info("View [source code](https://github.com/wpan03/TDF_Technical_Tutorial/tree/master/tdf_toolbox)")
@@ -41,3 +42,5 @@ elif selectbox == "Merge":
 elif selectbox == 'Examine':
     examine()
 
+elif selectbox == 'Find Repeat':
+  find_repeat()
